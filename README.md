@@ -2,6 +2,21 @@
 
 # react-scanner
 
+## About this fork
+
+This repository is a fork of [react-scanner](https://github.com/moroshko/react-scanner)
+by [Misha Moroshko](https://github.com/moroshko). The original MIT license and
+copyright are preserved in [LICENSE](./LICENSE).
+
+This fork adds the optional `resolveImport` and `resolveComponent` hooks described
+below, with generic tests and callback validation. They let callers supply import
+evidence and use an external symbol resolver while preserving default behavior.
+The focused upstream contribution is [draft PR #85](https://github.com/moroshko/react-scanner/pull/85).
+
+Dependency versions remain unchanged. Updating TypeScript and the parser is kept
+separate from the hook contribution because it affects the order of an existing
+test's output.
+
 `react-scanner` statically analyzes the given code (TypeScript supported) and extracts React components and props usage.
 
 First, it crawls the given directory and compiles a list of files to be scanned. Then, it scans every file and extracts rendered components and their props into a JSON report.
